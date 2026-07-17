@@ -1,8 +1,8 @@
-# 💻 Single-Cycle RISC-V Processor (RV32I Subset)
+# Single-Cycle RISC-V Processor (RV32I Subset)
 
 A simple, single-cycle RISC-V processor implemented in **SystemVerilog**, supporting a basic subset of the RV32I instruction set. This project includes the complete datapath, control unit, and testbench.
 
-## ✨ Supported Instructions
+##  Supported Instructions
 
 This processor currently supports the following instruction types:
 
@@ -12,7 +12,7 @@ This processor currently supports the following instruction types:
 - **B-Type:** `BEQ`
 - **J-Type:** `JAL`
 
-## 🏗️ Architecture & Modules
+##  Architecture & Modules
 
 The design follows the standard single-cycle datapath architecture:
 
@@ -26,12 +26,11 @@ The design follows the standard single-cycle datapath architecture:
 - `dmem`: Data memory with separate read/write logic.
 - `tb_cpu`: Testbench that generates the clock/reset, dumps VCD waveforms, and displays register/memory states at the end of simulation.
 
-## 🚀 How to Simulate
-
-This project uses the `$readmemh` function to load instructions, so you must provide a `program.hex` file in the simulation directory.
-
 ## RTL Architecture
 
+##  How to Simulate
+
+This project uses the `$readmemh` function to load instructions, so you must provide a `program.hex` file in the simulation directory.
 
 ### Using Icarus Verilog
 
@@ -59,7 +58,7 @@ This project uses the `$readmemh` function to load instructions, so you must pro
 
 At the end of the simulation (`#500`), the testbench will print the state of the first 16 registers and the first 4 memory locations in the console.
 
-## 📝 Notes
+##  Notes
 
 - The data memory and instruction memory are limited to 256 words (1 KB) each for simulation purposes.
 - Memory addresses are word-aligned using `addr[9:2]`.
